@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 20161212030137) do
   end
 
   create_table "school_types", force: :cascade do |t|
-    t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "school_type"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "states", force: :cascade do |t|
