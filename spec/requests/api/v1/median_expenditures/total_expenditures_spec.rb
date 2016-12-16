@@ -15,7 +15,7 @@ describe "median_expenditures endpoints" do
       med_exp = MedianExpenditure.create!(total: 3333, school_type: s_type1, state: state2)
       med_exp = MedianExpenditure.create!(total: 4444, school_type: s_type2, state: state2)
 
-      get "/api/v1/totals"
+      get "/api/v1/median_expenditures/totals"
 
       totals = JSON.parse(response.body)
 
