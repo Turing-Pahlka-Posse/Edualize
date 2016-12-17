@@ -20,6 +20,10 @@ describe "median_expenditures endpoints" do
       expect(response).to be_success
       expect(totals).to be_a(Hash)
       expect(totals.count).to eq(2)
+      expect(totals).to have_key(state2.st_abbrev)
+      expect(totals).to have_key(state1.st_abbrev)
+      expect(totals[state2.st_abbrev]['charter']).to be_a(Integer)
+      expect(totals[state2.st_abbrev]['non_charter']).to be_a(Integer)
     end
   end
 end
