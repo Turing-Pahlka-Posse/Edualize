@@ -7,8 +7,6 @@ task :import_charter_non_charter => [:environment] do
   SchoolType.create(type_of_school: "charter")
   SchoolType.create(type_of_school: "non_charter")
 
-
-
   CSV.foreach(first_file, :headers => true) do |row|
     state = State.create!({
       st_name: row[0],
