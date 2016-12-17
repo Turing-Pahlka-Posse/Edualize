@@ -4,14 +4,17 @@ desc "Import charter/non-charter files"
 task :import_charter_non_charter => [:environment] do
   first_file = "db/data/edu_data_0.csv"
 
-  SchoolType.create(school_type: "charter")
-  SchoolType.create(school_type: "non_charter")
+  SchoolType.create(type_of_school: "charter")
+  SchoolType.create(type_of_school: "non_charter")
+
+
 
   CSV.foreach(first_file, :headers => true) do |row|
     state = State.create!({
-      st_name: row[0]
+      st_name: row[0],
+      st_abbrev: State.find_state_abbreviation(row[0])
     })
-    puts "#{state.id}: #{state.st_name}"
+    puts "#{state.id}: #{state.st_name} #{state.st_abbrev}"
 
     exp_char = MedianExpenditure.create!({
       total: row[1],

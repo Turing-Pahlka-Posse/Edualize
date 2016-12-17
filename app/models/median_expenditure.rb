@@ -5,7 +5,9 @@ class MedianExpenditure < ApplicationRecord
   belongs_to :state
 
   def self.find_totals_by_school_type
-    schools = MedianExpenditure.joins(:state, :school_type).group("states.st_abbrev", "school_types.type_of_school", :total).pluck(:st_abbrev, :type_of_school, :total)
+    schools = MedianExpenditure.joins(:state, :school_type)
+      .group("states.st_abbrev", "school_types.type_of_school", :total)
+      .pluck(:st_abbrev, :type_of_school, :total)
     format_state_spending(schools)
   end
 
