@@ -17,6 +17,7 @@ describe "median_expenditures endpoints" do
 
       totals = JSON.parse(response.body)
 
+      binding.pry
       expect(response).to be_success
       expect(totals).to be_a(Hash)
       expect(totals.count).to eq(2)
