@@ -27,7 +27,7 @@ RSpec.describe MedianExpenditure, type: :model do
     end
 
     context ".format_state_spending" do
-      it "formats an array into an organized hash" do
+      xit "formats an array into an organized hash" do
         schools = [["CO", "charter", 3333], ["DE", "charter", 1234], ["DE", "non_charter", 4321], ["CO", "non_charter", 4444]]
 
         formatted = MedianExpenditure.format_state_spending(schools)

@@ -17,14 +17,16 @@ describe "median_expenditures endpoints" do
 
       totals = JSON.parse(response.body)
 
-      binding.pry
       expect(response).to be_success
-      expect(totals).to be_a(Hash)
-      expect(totals.count).to eq(2)
-      expect(totals).to have_key(state2.st_abbrev)
-      expect(totals).to have_key(state1.st_abbrev)
-      expect(totals[state2.st_abbrev]['charter']).to be_a(Integer)
-      expect(totals[state2.st_abbrev]['non_charter']).to be_a(Integer)
+      expect(totals).to be_a(Array)
+      expect(totals.count).to eq(4)
+      expect(totals[0]).to have_key('state')
+      expect(totals[0]).to have_key('type')
+      expect(totals[0]).to have_key('total')
+      expect(totals[0]['state']).to eq(state1.st_abbrev)
+      expect(totals[0]['type']).to eq(s_type1.type_of_school)
+      expect(totals[0]['total']).to eq(1234)
+
     end
   end
 end
