@@ -6,7 +6,7 @@ describe "the API docs pages" do
       visit root_path
 
       expect(page).to have_content("Welcome to Edualize!")
-      expect(page).to have_content("This is Turing School of Software and")
+      expect(page).to have_content("This is an API designed to collect and simplify")
       expect(page).to have_content("Pahlka Posse")
       expect(page).to have_content("Funding Data Requests")
       expect(page).to have_content("GET")
