@@ -41,3 +41,9 @@
 .docs-table {
   margin-bottom: 2rem;
 }
+
+.docs-image {
+  width: 30%;
+  height: auto;
+  border: 1px solid black;
+}
