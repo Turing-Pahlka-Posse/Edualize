@@ -1,0 +1,35 @@
+<div class="docs">
+<h3 class="docs-header">Welcome to Edualize!</h3>
+  <p>This is an API designed to collect and simplify US Education data, created by <a href="https://github.com/Turing-Pahlka-Posse", class="docs-link", target="_blank">Pahlka Posse</a> (a civic tech group at <a href="https://www.turing.io", class="docs-link", target="_blank">Turing School of Software and Design</a>).</p>
+
+  <h4 class="docs-header">How to use:</h4>
+
+  <p>Fire up an app like Postman, or send requests from within your application. At the moment, no authorization is necessary.</p>
+
+  <h5 class="docs-header">School Funding Data</h5>
+  <table class="table table-striped table-hover docs-table">
+      <thead>
+          <tr>
+              <th>Request Type</th>
+              <th>Endpoint</th>
+              <th>Purpose</th>
+              <th>Sample Result</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>GET</td>
+              <td>https://edualize.herokuapp.com/api/v1/median_expenditures/totals</td>
+              <td>retrieve median expenditures for schools</td>
+              <td>this will return a list of expenditures for all 50 state's schools by charter and non-charter schools</td>
+          </tr>
+      </tbody>
+  </table>
+  
+
+  <p>This data comes from the <a href="https://nces.ed.gov/ccd/pub_pubdistricts.asp", class="docs-link", target="_blank">National Center for Education Statistics</a> and is from the fiscal year 2013.</p>
+
+  <h4 class="docs-header">Sample JSON response:</h4>
+  <img src="https://github.com/bermannoah/repo-images/blob/master/pahlka-edualize-api-return-sample.jpg?raw=true", class="img-responsive docs-image", alt="sample json response">
+
+</div>

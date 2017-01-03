@@ -46,6 +46,8 @@ end
 group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 

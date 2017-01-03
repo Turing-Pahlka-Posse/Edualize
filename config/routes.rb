@@ -5,5 +5,7 @@ Rails.application.routes.draw do
       get "median_expenditures/totals", to: "median_expenditures/totals#index"
     end
   end
+  
+  root "docs#index"
 
 end

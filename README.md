@@ -1,24 +1,45 @@
-# README
+# Edualize
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API designed to collect and simplify US Education data, created by [Pahlka Posse](https://github.com/Turing-Pahlka-Posse) (a civic tech group at [Turing School of Software and Design](https://www.turing.io)). We'll be updating it as we include new data sources, so check back soon!
 
-Things you may want to cover:
+### Technical Details
 
-* Ruby version
+A Rails API storing data in a PostgreSQL database. Data was scraped from a PDF using our home-grown [PDF scraper](https://github.com/Turing-Pahlka-Posse/pdf-translate) and imported with a custom rake task. CSS is customized [Spectre](https://picturepan2.github.io/spectre/) and testing is handled by RSpec + Capybara.
 
-* System dependencies
+## How to use:
 
-* Configuration
+You can access our web-based API (see [here](https://edualize.herokuapp.com)) via the commands below, or download and run the app locally. Either way, you'll need the following info:
 
-* Database creation
+### Get median expenditures for all schools
 
-* Database initialization
+Send a GET request to (for example) https://edualize.herokuapp.com/api/v1/median_expenditures/totals. Replace edualize.herokuapp.com with your own localhost preference.
 
-* How to run the test suite
+#### Data source
+This data comes from the [National Center for Education Statistics](https://nces.ed.gov/ccd/pub_pubdistricts.asp) and is from the fiscal year 2013.
 
-* Services (job queues, cache servers, search engines, etc.)
+## How to install locally
 
-* Deployment instructions
+#### Clone down and prep the repo!
 
-* ...
+`git clone https://github.com/Turing-Pahlka-Posse/Edualize`
+`cd Edualize`
+`bundle install`
+
+#### Prep the database!
+
+Still within the Edualize directory, do the following:
+
+1. Make sure you have PostgreSQL running. 
+2. `rake db:create db:migrate db:test:prepare`
+
+#### Import education data from the included CSV file!
+
+Run `rake import_charter_non_charter`
+
+#### Run tests to make sure everything works!
+
+`rspec`
+
+#### You're done!
+
+If you run into any problems, feel free to get in touch with us or file an issue.

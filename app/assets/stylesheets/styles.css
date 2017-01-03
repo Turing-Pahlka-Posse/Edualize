@@ -1,0 +1,49 @@
+/* navbar styles fix */
+
+.navbar-override {
+  margin-top: 2rem;
+}
+
+.navbar-text {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-size: 3.5rem;
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-subhead-text {
+  font-size: 1.5rem;
+}
+
+.navbar-subhead-link {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* docs page/s styles fix */
+
+.docs {
+  margin: 4rem;
+}
+
+.docs-header {
+  font-weight: bold;
+}
+
+.docs-link {
+  text-decoration: none;
+}
+
+.docs-table {
+  margin-bottom: 2rem;
+}
+
+.docs-image {
+  width: 30%;
+  height: auto;
+  border: 1px solid black;
+}
