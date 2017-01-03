@@ -2,6 +2,8 @@
 
 This is an API designed to collect and simplify US Education data, created by [Pahlka Posse](https://github.com/Turing-Pahlka-Posse) (a civic tech group at [Turing School of Software and Design](https://www.turing.io)). We'll be updating it as we include new data sources, so check back soon!
 
+![View page sample](https://github.com/bermannoah/repo-images/blob/master/pahlka-edualize-view-page-image.jpg)
+
 ### Technical Details
 
 A Rails API storing data in a PostgreSQL database. Data was scraped from a PDF using our home-grown [PDF scraper](https://github.com/Turing-Pahlka-Posse/pdf-translate) and imported with a custom rake task. CSS is customized [Spectre](https://picturepan2.github.io/spectre/) and testing is handled by RSpec + Capybara.
@@ -13,6 +15,8 @@ You can access our web-based API (see [here](https://edualize.herokuapp.com)) vi
 ### Get median expenditures for all schools
 
 Send a GET request to (for example) https://edualize.herokuapp.com/api/v1/median_expenditures/totals. Replace edualize.herokuapp.com with your own localhost preference.
+
+![Sample Json Response](https://github.com/bermannoah/repo-images/blob/master/pahlka-edualize-api-return-sample.jpg?raw=true)
 
 #### Data source
 This data comes from the [National Center for Education Statistics](https://nces.ed.gov/ccd/pub_pubdistricts.asp) and is from the fiscal year 2013.
