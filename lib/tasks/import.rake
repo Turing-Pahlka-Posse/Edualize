@@ -9,9 +9,10 @@ task :import_charter_non_charter => [:environment] do
 
   CSV.foreach(first_file, :headers => true) do |row|
     state = State.create!({
-      st_name: row[0]
+      st_name: row[0],
+      st_abbrev: State.find_state_abbreviation(row[0])
     })
-    puts "#{state.id}: #{state.st_name}"
+    puts "#{state.id}: #{state.st_name} #{state.st_abbrev}"
 
     exp_char = MedianExpenditure.create!({
       total: row[1],
